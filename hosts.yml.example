@@ -1,0 +1,13 @@
+---
+all:
+  children:
+    windows:
+      hosts:
+        localhost:
+          nickname: win-localhost
+          ansible_port: 5985
+          ansible_connection: winrm
+          ansible_winrm_transport: basic
+          ansible_user: <Windows User>
+          ansible_password: <Windows User Password>
+
