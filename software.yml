@@ -1,23 +1,23 @@
-- hosts: windows
+- hosts: localhost
   gather_facts: no
   tasks:
   - name: Test system connection
     wait_for_connection:
       timeout: 10
 
-  - name: Upgrade existing software
-    win_chocolatey:
-      name: all
-      state: latest
-    tags: software
+  # - name: Upgrade existing software
+  #   win_chocolatey:
+  #     name: all
+  #     state: latest
+  #   tags: software
 
-  - name: Install Chrome
-    win_chocolatey:
-      name: googlechrome
-      state: latest
-    tags: software
+  # - name: Install Chrome
+  #   win_chocolatey:
+  #     name: googlechrome
+  #     state: latest
+  #   tags: software
 
   - name: Install Windows updates
-    win_updates:
+    ansible.windows.win_updates:
       state: installed
 

@@ -1,6 +1,11 @@
 Windows Environment Setup
 =========================
 
+## WARNING - ansible on windows sucks! Even using the WSL, it still sucks. I ended up switching back to Linux and everything worked as expected.
+
+
+### Steps
+
 1. "Turn Windows features on or off"
 2. Check "Windows Subsystem for Linux" and press OK. "Restart!"
 3. Open the "Microsoft Store" and search for "Ubuntu"
@@ -37,9 +42,11 @@ Windows Environment Setup
 
 11. Create some symbolic links for convenience
 
-  $ ln -s /mnt/c ~/C
-  $ ln -s /mnt/d ~/D
-  $ ln -s '/home/dev/C/Documents and Settings/Dev' ~/Dev
+```bash
+ln -s /mnt/c ~/C
+ln -s /mnt/d ~/D
+ln -s '/mnt/c/Users/Dev' ~/Dev
+```
 
 12. Run the ansible playbook
 

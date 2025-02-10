@@ -1,0 +1,9 @@
+---
+
+- name: talk to localhost
+  hosts: localhost
+  connection: local
+  gather_facts: no  # stop gathering facts for now
+  tasks:
+    - name: Print Hello from Ansible
+      debug: msg='Hello from Ansible'
